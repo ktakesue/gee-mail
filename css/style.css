@@ -1,0 +1,14 @@
+h1 {
+	color: black;
+	font-family: "Courier New", monospace;
+	font-size: 75px;
+	outline-color: red;
+}
+
+h2 {
+	outline-color: black;
+	outline-width: 1px;
+}
+html {
+	background-color: lightblue;
+}

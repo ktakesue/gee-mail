@@ -1,14 +1,19 @@
 h1 {
-	color: black;
-	font-family: "Courier New", monospace;
+	font-family: "Verdana", sans-serif;
 	font-size: 75px;
-	outline-color: red;
+	font-variant: small-caps;
+	color: maroon;
 }
 
 h2 {
-	outline-color: black;
-	outline-width: 1px;
+	font-weight: bold;
+	font-variant: small-caps;
 }
 html {
-	background-color: lightblue;
+	background-image: url('https://static.pexels.com/photos/277785/pexels-photo-277785.jpeg');
+	height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }

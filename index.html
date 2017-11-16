@@ -7,24 +7,32 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        for(var i = 0; i<window.geemails.length; i++){
+        for(var i = 0; i < 10; i++){
         	console.log(window.geemails[i].sender);
         	console.log(window.geemails[i].subject);
         	console.log(window.geemails[i].body);
         	console.log(window.geemails[i].date);
      	}     
+		      
+
       };
     </script>
 	</head>
 	<body>
-		<h1>Gee-Mail</h1>
-		<h2>Inbox</h2>
-		<h4>Compose</h4>
-		<h4>Sent</h4>
-		<h4>Drafts</h4>
-		<h4>Flagged</h4>
-		<h4>Spam</h4>
-
-		<div class="container" id="main"> </div>
+		<div class="container" id="main"></div>
+		<header>
+			<h1>Gee-Mail</h1>
+		</header>
+		<nav>
+  			<ul>
+    			<h2><li><a href="#">Inbox</a></li></h2>
+    			<h3><li>Compose</li></h3>
+    			<h3><li>Sent</li></h3>
+  				<h3><li>Drafts</li></h3>
+  				<h3><li>Flagged</li></h3>
+  				<h3><li>Spam</li></h3>
+  			</ul>
+		</nav>
+		
 	</body>
 </html>

@@ -36,6 +36,22 @@ h2 {
 	font-size: 30px;
 }
 
+[data-notifications] {
+  position: relative;
+}
+
+[data-notifications]:after {
+
+  content: attr(data-notifications);
+
+  position: absolute;
+  color: red;
+  font-size: 18px;
+  padding: 0.3em;
+  right: -15px;
+  top: -15px;   
+}
+
 h3 {
 	line-height: 0.5;
 }
@@ -45,7 +61,6 @@ table, th, td {
     padding: 5px;
     margin: auto;
     background-color: white;
-
 }
 
 th {
@@ -56,6 +71,9 @@ td {
 	text-align: left;
 }
 
+table {
+	width: 100%;
+}
 
 html {
 	background-image: url('https://static.pexels.com/photos/277785/pexels-photo-277785.jpeg');

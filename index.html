@@ -18,30 +18,37 @@
         	console.log(window.geemails[i].date);
      	}		
 		
-		var text1 = "";
+		var send = "";
 		var i;
 		for (i = 0; i < 10; i++) {
-    		text1 += sender[i] + "<br>";
+    		send += window.geemails[i].sender + "<br>";
     	}
 
-		document.getElementById("main1").innerHTML = text1;
+		document.getElementById("sender").innerHTML = send;
 
-		var text2 = "";
+		var sub = "";
 		var i;
 		for (i = 0; i < 10; i++) {
-    		text2 += subject[i] + "<br>";
+    		sub += window.geemails[i].subject + "<br>";
     	}
 
-    	document.getElementById("main2").innerHTML = text2;
+    	document.getElementById("subject").innerHTML = sub;
 
-    	var text3 = "";
+    	var bod = "";
 		var i;
 		for (i = 0; i < 10; i++) {
-    		text3 += body[i] + "<br>";
+    		bod += window.geemails[i].body + "<br>";
     	}
 
-    	document.getElementById("main3").innerHTML = text3;
+    	document.getElementById("body").innerHTML = bod;
 
+    	var dat = "";
+		var i;
+		for (i = 0; i < 10; i++) {
+    		dat += window.geemails[i].date + "<br>";
+    	}
+
+    	document.getElementById("date").innerHTML = dat;
 	};
 
     </script>
@@ -66,11 +73,13 @@
 					<th>Sender</th>
 					<th>Subject</th>
 					<th>Body</th>
+					<th>Date</th>
 				</tr>
 				<tr>
-					<td><p id="main1"></p></td>
-					<td><p id="main2"></p></td>
-					<td><p id="main3"></p></td>
+					<td><p id="sender"></p></td>
+					<td><p id="subject"></p></td>
+					<td><p id="body"></p></td>
+					<td><p id="date"></p></td>
 				</tr>		
 			</table>
 		</aside>

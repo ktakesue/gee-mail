@@ -43,13 +43,20 @@ h3 {
 table, th, td {
     border: 3px solid black;
     padding: 5px;
-}
-table {
-    border-spacing: 15px;
-    margin-left: 120px;
-    margin: 0;
+    margin: auto;
+    background-color: white;
 
 }
+
+th {
+	text-align: center;
+}
+
+td {
+	text-align: left;
+}
+
+
 html {
 	background-image: url('https://static.pexels.com/photos/277785/pexels-photo-277785.jpeg');
 	height: 200%;

@@ -8,78 +8,55 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
-		for(var i = 0; i < 10; i++){
-        	console.log(window.geemails[i].sender);
-        	console.log(window.geemails[i].subject);
-        	console.log(window.geemails[i].body);
-        	console.log(window.geemails[i].date);
-     	}		
-		
-		var send = "";
-		var i;
-		for (i = 0; i < 10; i++) {
-    		send += window.geemails[i].sender + "<br>";
-    	}
+		for(var i = 0; i < geemails.length; i++){
+        	console.log(geemails[i].sender);
+        	console.log(geemails[i].subject);
+        	console.log(geemails[i].body);
+        	console.log(geemails[i].date);
 
-		document.getElementById("sender").innerHTML = send;
 
-		var sub = "";
-		var i;
-		for (i = 0; i < 10; i++) {
-    		sub += window.geemails[i].subject + "<br>";
-    	}
+     	var senderElem = document.createElement("h5");
+  		senderElem.className = "sender";
+  		senderElem.innerHTML = geemails[i].sender;
+  		document.body.appendChild(senderElem);
+  
+  		var subjectElem = document.createElement("p");
+  		subjectElem.className = "subject";
+  		subjectElem.innerHTML = geemails[i].subject;
+  		senderElem.appendChild(subjectElem);
 
-    	document.getElementById("subject").innerHTML = sub;
+  		var dateElem = document.createElement("p");
+  		dateElem.className = "date";
+  		dateElem.innerHTML = geemails[i].date;
+  		senderElem.appendChild(dateElem);
 
-    	var bod = "";
-		var i;
-		for (i = 0; i < 10; i++) {
-    		bod += window.geemails[i].body + "<br>";
-    	}
+  		var bodyElem = document.createElement("p");
+  		bodyElem.className = "body";
+  		bodyElem.innerHTML = geemails[i].body;
+  		senderElem.appendChild(bodyElem);
 
-    	document.getElementById("body").innerHTML = bod;
 
-    	var dat = "";
-		var i;
-		for (i = 0; i < 10; i++) {
-    		dat += window.geemails[i].date + "<br>";
-    	}
-
-    	document.getElementById("date").innerHTML = dat;
-
+     	}
+	
 	};
 
     </script>
 	</head>
 	<body>
 		<header>
-			<h1>Gee-Mail</h1>
+			<h1 class="title">Gee-Mail</h1>
 		</header>
 	<div class="container" id="main">
 		<nav>
   			<ul>
     			<h2><li><a data-notifications="10" class="button" href="#">Inbox</a></li></h2>
-    			<h3><li>Compose</li></h3>
-    			<h3><li>Sent</li></h3>
-  				<h3><li>Drafts</li></h3>
-  				<h3><li>Flagged</li></h3>
-  				<h3><li>Spam</li></h3>
+    			<h4><li>Compose</li></h4>
+    			<h4><li>Sent</li></h4>
+  				<h4><li>Drafts</li></h4>
+  				<h4><li>Flagged</li></h4>
+  				<h4><li>Spam</li></h4>
   			</ul>
 		</nav>	
-		<table id="table">
-			<tr>
-				<th>Sender</th>
-				<th>Subject</th>
-				<th>Body</th>
-				<th>Date</th>
-			</tr>
-			<tr>
-				<td><p id="sender"></p></td>
-				<td><p id="subject"></p></td>
-				<td><p id="body"></p></td>
-				<td><p id="date"></p></td>
-			</tr>		
-		</table>
 	</div>
 	</body>
 </html>

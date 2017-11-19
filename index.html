@@ -37,6 +37,23 @@
 
 
      	}
+
+     	var messageBox = document.getElementsByClassName("sender");
+		for(var i = 0; i < messageBox.length; i++){
+  			messageBox[i].addEventListener("click", showMessage);
+		}
+
+
+		function showMessage(){
+  
+  		var messageItem = this.querySelectorAll(".body")[0];
+  		if(messageItem.style.display === "none"){
+    	messageItem.style.display = "block";
+  		}else{
+    	messageItem.style.display = "none";
+  		}
+
+		}
 	
 	};
 

@@ -1,6 +1,4 @@
 header {
-    padding: 0;
-    clear: left;
     text-align: center;
 }
 
@@ -25,7 +23,7 @@ nav ul a {
 	font-family: "Verdana", sans-serif;
 	font-size: 75px;
 	font-variant: small-caps;
-	color: indigo;
+	color: 	#d2143a;
 }
 
 .button {
@@ -36,19 +34,19 @@ nav ul a {
 }
 
 [data-notifications] {
-  position: relative;
+  	position: relative;
 }
 
 [data-notifications]:after {
 
-  content: attr(data-notifications);
+  	content: attr(data-notifications);
 
-  position: absolute;
-  color: red;
-  font-size: 17px;
-  padding: 0.3em;
-  right: -15px;
-  top: -15px;   
+  	position: absolute;
+  	color: red;
+  	font-size: 17px;
+  	padding: 0.3em;
+  	right: -15px;
+  	top: -15px;   
 }
 
 h4 {
@@ -56,26 +54,35 @@ h4 {
 }
 
 h5.sender {
-	font-size: 16px
+	font-size: 16px;
+	border: 2px solid black;
+ 	padding: 10px;
+  	margin-left: 100px;
+  	background-color: white;
+  	color: #000099;
 }
 
 p.subject {
 	display: inline;
 	font-size: 15px;
 	margin-left: 10px;
-	font-weight: normal; 
+	font-weight: thick; 
+	color: black;
 }
 
 p.date {
 	display: inline;
-	font-size: 15px;
+	font-size: 14px;
 	margin-left: 10px;
-	font-weight: normal; 
+	font-weight: normal;
+	font-style: italic; 
+	color: black;
 }
 
 p.body {
 	font-weight: lighter;
-	font-size: 14px;
+	font-size: 15px;
+	color: black;
 }
 
 html {

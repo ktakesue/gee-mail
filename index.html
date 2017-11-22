@@ -64,10 +64,8 @@
 
 		}
 
-		setInterval(inboxCount, 2000);
+		setInterval(inboxCount, 1500);
 
-
-			
 
 		function emails (){
 
@@ -93,12 +91,11 @@
   			bodyElem.className = "body";
   			bodyElem.innerHTML = myNewMessage.body;
   			senderElem.appendChild(bodyElem);
-		
+			
 			var messageBox = document.getElementsByClassName("sender");
 			for(var i = 0; i < messageBox.length; i++){
   			messageBox[i].addEventListener("click", showMessage);
 			}
-
 
 			function showMessage(){
   

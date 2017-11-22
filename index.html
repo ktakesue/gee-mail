@@ -54,7 +54,29 @@
   		}
 
 		}
-	
+
+		var countElem = document.getElementById("count")
+			countElem.innerHTML = "Inbox: " + geemails.length;
+
+		function inboxCount(){
+			var countElem = document.getElementById("count")
+			countElem.innerHTML = "Inbox: " + geemails.length++;
+
+		}
+
+		setInterval(inboxCount, 2000);
+
+		
+		var newEmail = getNewMessage;
+			console.log(getNewMessage());
+		document.getElementsByClassName("sender").innerHTML = newEmail;
+
+    	setInterval(newEmail, 2000);
+
+		
+		
+
+
 	};
 
     </script>
@@ -66,12 +88,12 @@
 	<div class="container" id="main">
 		<nav>
   			<ul>
-    			<h2><li><a data-notifications="10" class="button" href="#">Inbox</a></li></h2>
-    			<h4><li>Compose</li></h4>
-    			<h4><li>Sent</li></h4>
-  				<h4><li>Drafts</li></h4>
-  				<h4><li>Flagged</li></h4>
-  				<h4><li>Spam</li></h4>
+    			<h2><li><a id="count" class="button" href="#"></a></li></h2>
+    			<h4><li><a href="#">Compose</a></li></h4>
+    			<h4><li><a href="#">Sent</a></li></h4>
+  				<h4><li><a href="#">Drafts</a></li></h4>
+  				<h4><li><a href="#">Flagged</a></li></h4>
+  				<h4><li><a href="#">Spam</a></li></h4>
   			</ul>
 		</nav>	
 	</div>

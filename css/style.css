@@ -4,11 +4,12 @@ header {
 
 nav {
     float: left;
-    padding: 1em;
+    padding: 0.5em;
     padding-top: 0em;
     padding-bottom: 0em;
     border: 2px solid black; 
     background-color: white;
+    margin: 0;
 }
 
 nav ul {
@@ -27,36 +28,23 @@ nav ul a {
 }
 
 .button {
-	font-weight: bold;
+	font-weight: 900;
 	font-variant: small-caps;
 	text-decoration: underline;
-	font-size: 25px;
+	text-decoration-color: black;
+	font-size: 19px;
 }
 
-[data-notifications] {
-  	position: relative;
-}
-
-[data-notifications]:after {
-
-  	content: attr(data-notifications);
-
-  	position: absolute;
-  	color: red;
-  	font-size: 17px;
-  	padding: 0.3em;
-  	right: -15px;
-  	top: -15px;   
-}
 
 h4 {
 	line-height: 0.5;
+	font-size: 15px;
 }
 
 h5.sender {
 	font-size: 16px;
 	border: 2px solid black;
- 	padding: 10px;
+ 	padding: 15px;
   	margin-left: 100px;
   	background-color: white;
   	color: #000099;
@@ -95,7 +83,7 @@ h5.sender:hover {
 
 html {
 	background-image: url('https://static.pexels.com/photos/277785/pexels-photo-277785.jpeg');
-	size: 300%;
+	size: 500%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;

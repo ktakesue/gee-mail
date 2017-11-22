@@ -66,8 +66,56 @@
 
 		setInterval(inboxCount, 2000);
 
-		
 
+			
+
+		function emails (){
+
+			var myNewMessage = getNewMessage();
+				console.log(myNewMessage);
+			
+			var senderElem = document.createElement("h5");
+  			senderElem.className = "sender";
+  			senderElem.innerHTML = myNewMessage.sender;
+  			document.body.appendChild(senderElem);
+  
+  			var subjectElem = document.createElement("p");
+  			subjectElem.className = "subject";
+  			subjectElem.innerHTML = myNewMessage.subject;
+  			senderElem.appendChild(subjectElem);
+
+  			var dateElem = document.createElement("p");
+  			dateElem.className = "date";
+  			dateElem.innerHTML = myNewMessage.date;
+  			senderElem.appendChild(dateElem);
+
+  			var bodyElem = document.createElement("p");
+  			bodyElem.className = "body";
+  			bodyElem.innerHTML = myNewMessage.body;
+  			senderElem.appendChild(bodyElem);
+		
+			var messageBox = document.getElementsByClassName("sender");
+			for(var i = 0; i < messageBox.length; i++){
+  			messageBox[i].addEventListener("click", showMessage);
+			}
+
+
+			function showMessage(){
+  
+  			var messageItem = this.querySelectorAll(".body")[0];
+  			if(messageItem.style.display === "none"){
+    		messageItem.style.display = "block";
+  			}else{
+    		messageItem.style.display = "none";
+  			}
+
+			}
+
+		}			
+		
+		setInterval(emails, 2000);
+		
+		
 	};
 
     </script>

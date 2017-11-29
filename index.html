@@ -18,7 +18,7 @@
      	var senderElem = document.createElement("h5");
   		senderElem.className = "sender";
   		senderElem.innerHTML = geemails[i].sender;
-  		document.body.appendChild(senderElem);
+  		main.appendChild(senderElem);
   
   		var subjectElem = document.createElement("p");
   		subjectElem.className = "subject";
@@ -75,7 +75,7 @@
 			var senderElem = document.createElement("h5");
   			senderElem.className = "sender";
   			senderElem.innerHTML = myNewMessage.sender;
-  			document.body.appendChild(senderElem);
+  			main.insertBefore(senderElem, main.childNodes[0]);
   
   			var subjectElem = document.createElement("p");
   			subjectElem.className = "subject";
@@ -96,22 +96,23 @@
 			for(var i = 0; i < messageBox.length; i++){
   			messageBox[i].addEventListener("click", showMessage);
 			}
-
+			
 			function showMessage(){
   
-  			var messageItem = this.querySelectorAll(".body")[0];
-  			if(messageItem.style.display === "none"){
-    		messageItem.style.display = "block";
-  			}else{
-    		messageItem.style.display = "none";
-  			}
-
+  				var messageItem = this.querySelectorAll(".body")[0];
+  				if(messageItem.style.display === "none"){
+    			messageItem.style.display = "block";
+  				}else{
+    			messageItem.style.display = "none";
+  				}
 			}
+
 
 		}			
 		
 		setInterval(emails, 2000);
-		
+	
+	
 		
 	};
 
@@ -121,7 +122,6 @@
 		<header>
 			<h1 class="title">Gee-Mail</h1>
 		</header>
-	<div class="container" id="main">
 		<nav>
   			<ul>
     			<h2><li><a id="count" class="button" href="#"></a></li></h2>
@@ -132,6 +132,6 @@
   				<h4><li><a href="#">Spam</a></li></h4>
   			</ul>
 		</nav>	
-	</div>
+		<div class="container" id="main"></div>
 	</body>
 </html>

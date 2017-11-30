@@ -6,6 +6,12 @@
     <script>
       window.onload = function(){
 
+
+		function topFunction() {
+    		document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+		}     
+
      function makeElem(elem, label, inside){
   			var container = document.createElement(elem);
   			container.className = label;
@@ -142,15 +148,28 @@
 		}			
 		
 		setInterval(emails, 3000);
-		
+
+		window.onscroll = function() {scrollFunction()};
+		document.getElementById("backtotop").addEventListener("click", topFunction);
+
+		function scrollFunction(){
+    		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 
+    	20) {
+        		document.getElementById("backtotop").style.display = "block";
+    		} else {
+        		document.getElementById("backtotop").style.display = "none";
+    		}
+		}
 	};
 
     </script>
 	</head>
 	<body>
 		<header>
+			<h5 class="welcome">Welcome, Guest!</h5><h5 class="sign-out"><a href="#">Sign Out</a></h5>
 			<h1 class="title">Gee-Mail</h1>
 		</header>
+		<button onclick="topFunction()" id="backtotop"><span>Top</span></button>
 		<nav>
   			<ul>
     			<h2><li><a id="count" class="button" href="#"></a></li></h2>
@@ -160,7 +179,7 @@
   				<h4><li><a href="#">Flagged</a></li></h4>
   				<h4><li><a href="#">Spam</a></li></h4>
   			</ul>
-		</nav>	
+		</nav>
 		<div class="container" id="main"></div>
 	</body>
 </html>

@@ -7,10 +7,6 @@
       window.onload = function(){
 
 
-		function topFunction() {
-    		document.body.scrollTop = 0;
-    		document.documentElement.scrollTop = 0;
-		}     
 
      function makeElem(elem, label, inside){
   			var container = document.createElement(elem);
@@ -149,6 +145,11 @@
 		
 		setInterval(emails, 3000);
 
+		function topFunction() {
+    		document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+		}     
+		
 		window.onscroll = function() {scrollFunction()};
 		document.getElementById("backtotop").addEventListener("click", topFunction);
 
